@@ -82,5 +82,40 @@ Recording some thing for myself.
 cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl$ 
 
 
-#Add a file to github project of  iamcxl
+#Add a file to github project of iamcxl
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl/.git$ cat config 
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:iamcxl369/iamcxl.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl/.git$ cd ..
+#Add a new file of github_operation.md
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl$ ls
+github_operation.md  README.md
+#Add to local git
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl$ git add github_operation.md 
+#Commit to local git
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl$ git commit -m "first coommit"
+[master 76be038] first coommit
+ 1 file changed, 86 insertions(+)
+ create mode 100644 github_operation.md
+#Push the commit to github
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.84 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:iamcxl369/iamcxl.git
+   13d064d..76be038  master -> master
+Branch master set up to track remote branch master from origin.
+cxl@cxl-ThinkPad-E420:~/github_prj/github_iamcxl/iamcxl$ 
 
